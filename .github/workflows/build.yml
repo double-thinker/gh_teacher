@@ -1,0 +1,10 @@
+name: Building # Nombre del workflow
+on: [push] # Cuando se ejecuta
+jobs: # Solo vamos a crear uno
+  building:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # Copiamos el repositorio
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
