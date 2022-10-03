@@ -1,5 +1,9 @@
 name: Building # Nombre del workflow
-on: [push] # Cuando se ejecuta
+on:
+  push:
+    tags:
+      - "v*.*.*" # Este on solo se ejecuta cuando hay etiqueta
+
 jobs: # Solo vamos a crear uno
   building:
     runs-on: ubuntu-latest
